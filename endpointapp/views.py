@@ -16,6 +16,9 @@ def get_info(request):
         # Get the current UTC time with validation of +/-2 hours
         utc_time = (datetime.utcnow() + timedelta(hours=2)).strftime('%Y-%m-%dT%H:%M:%SZ')
 
+        # Format UTC time to match "2023-09-07T12:14:41Z"
+        utc_time = datetime.strptime(utc_time, '%Y-%m-%dT%H:%M:%SZ').strftime('%Y-%m-%dT%H:%M:%SZ')
+
         # Get the GitHub file and repo URLs
         github_file_url = 'https://github.com/developerayyo/HNGTasks/blob/main/endpointapp/views.py'
         github_repo_url = 'https://github.com/developerayyo/HNGTasks'
