@@ -14,7 +14,7 @@ def get_info(request):
         current_day = datetime.now().strftime('%A')
 
         # Get the current UTC time with validation of +/-2 hours
-        utc_time = (datetime.utcnow() + timedelta(hours=1)).strftime('%Y-%m-%dT%H:%M:%SZ')
+        utc_time = (datetime.utcnow()).strftime('%Y-%m-%dT%H:%M:%SZ')
 
         # Format UTC time to match "2023-09-07T12:14:41Z"
         #- The utc time should be in this format : 2023-09-07T12:19:19Z
