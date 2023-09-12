@@ -1,6 +1,6 @@
-# Django API Documentation
+# Django Person API Documentation
 
-Welcome to the documentation for our Django API. This API allows you to manage persons and perform CRUD operations on them. Here, you will find information about the API's endpoints, request/response formats, sample usage, known limitations, and setup instructions.
+Welcome to the documentation for Django Person API. This API allows you to manage persons and perform CRUD operations on them. Here, you will find information about the API's endpoints, request/response formats, sample usage, known limitations, and setup instructions.
 
 ## API Endpoints
 
