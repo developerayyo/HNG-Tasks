@@ -1,5 +1,7 @@
 .env
 db.sqlite3
+/personres/migrations
+/endpointapp/migrations
 #/staticfiles
 # Django #
 *.log
