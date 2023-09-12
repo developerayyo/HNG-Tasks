@@ -4,5 +4,5 @@ from . import views
 app_name = 'endpointapp'
 
 urlpatterns = [
-    path('api/', views.get_info, name='get_info'),
+    path('stage1/', views.get_info, name='get_info'),
 ]

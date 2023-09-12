@@ -21,5 +21,7 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("", include("endpointapp.urls", namespace='endpointapp'))
+    path("", include("endpointapp.urls", namespace='endpointapp')),
+    # path('', include('personres.personapi.urls')),
+    path('', include('personres.personapi.urls', namespace='personapi')),
 ]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

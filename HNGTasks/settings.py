@@ -42,11 +42,15 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "personres",
+    'corsheaders',
+    'rest_framework',
+    'django_extensions',
 ]
 
 MIDDLEWARE = [
-    "django.middleware.security.SecurityMiddleware",
     # 'whitenoise.middleware.WhiteNoiseMiddleware',
+    "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
@@ -54,6 +58,8 @@ MIDDLEWARE = [
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
+
+CORS_ORIGIN_ALLOW_ALL = True
 
 ROOT_URLCONF = "HNGTasks.urls"
 
@@ -91,7 +97,7 @@ DATABASES = {
 #         'ENGINE': 'django.db.backends.postgresql_psycopg2',
 #         'NAME': 'HNGTasks',
 #         'USER': 'developerayyo',
-#         'PASSWORD': '@Ayo2059',
+#         'PASSWORD': '',
 #         'HOST': 'localhost',
 #         'PORT': '',
 #     }
@@ -139,10 +145,10 @@ USE_TZ = True
 # import os
 # STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 
-STATIC_URL = '/static/
+STATIC_URL = '/static/'
 import os
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles/')
-STATICFILES_DIRS = [BASE_DIR / 'static',]
+# STATICFILES_DIRS = [BASE_DIR / 'static',]
 
 # MEDIA_URL = "/media/"
 # MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
@@ -151,3 +157,12 @@ STATICFILES_DIRS = [BASE_DIR / 'static',]
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+# REST_FRAMEWORK = {
+#     # Use Django's standard `django.contrib.auth` permissions,
+#     # or allow read-only access for unauthenticated users.
+#     'DEFAULT_PERMISSION_CLASSES': [
+#         'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
+#     ]
+# }
+
